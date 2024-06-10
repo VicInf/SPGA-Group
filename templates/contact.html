@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}SPGA Group{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        body{
+            background-color: #d3d3d3;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{ url_for('static', filename='Web Page Images/logo fondo blanco.png') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-9 text-center">Contactanos</h1>
+        <p class="lead mt-4">Correo: <br>Telefono: <br><a href="https://maps.app.goo.gl/9JijmkorHMoC2ETm8">58F8+5HR, Barcelona 6001, Anzoátegui</a></p>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}
+{% endblock %}

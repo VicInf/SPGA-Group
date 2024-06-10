@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+        .nav-link{
+            color: black;
+
+   }
+        .nav{
+            --bs-nav-link-hover-color: gray;
+   }
+    </style>
+
+<body>
+    <footer class="py-4" style="background-color: #dcdcdc">
+        <ul class="nav justify-content-center border-bottom pb-3">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about_us') }}">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('portfolio') }}">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('services') }}">¿Qué hacemos?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contactanos</a>
+            </li>
+        </ul>
+        <p class="text-center pt-4 text-body-secondary">© 2024 SPGA Group<br>Diseñado por Vicente Pérez</p>
+    </footer>
+</body>
+</html>

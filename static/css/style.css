@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1005;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.button_portfolio {
+    color: black;
+}
+
+.main-image{
+    width: 100%;
+    height: 25rem;
+    background-image: url("https://miro.medium.com/v2/resize:fit:2800/1*C_PY1_fjcKgBsbUntSwV-w.gif");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.carousel-inner img {
+   height:60vh;
+   overflow:hidden;
+ }
+
+.carousel {
+   width:100vh;
+}
+/* Trying stuff */
+.gallery-body{
+    padding: 10px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.wrapper{
+    max-width: 1100px;
+}
+.wrapper .gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery .image{
+    padding: 7px;
+    width: calc(100% / 3);
+}
+.gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3 ease;
+}
+.gallery .image:hover img{
+    transform: scale(1.1);
+}
+
+.preview-box{
+    position: fixed;
+    max-width: 900px;
+    max-height: 675px;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    padding: 0 5px 5px 5px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.preview-box .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+}
+.preview-box .details .icon{
+    color: #141414;
+    cursor: pointer;
+    font-size: 20px;
+}
+.preview-box .img-box{
+    display: flex;
+    width: 100%;
+}
+.img-box .slide{
+    position: absolute;
+    top:50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    width: 60px;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+}
+.img-box .slide.prev{
+    left:0;
+}
+.img-box .slide.next{
+    right:0;
+}
+.preview-box .img-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+.details .title p{
+    margin: 0 5px;
+}
+
+.details .title p.current-img{
+    font-weight: 500;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: rgba(0,0,0,0.4);
+}
+/* Splash screen */
+.navbar-disabled {
+    display: none;
+}
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: 1s;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 0;
+}
+
+.form {
+    color: white;
+}
+
+.btn-primary{
+    --bs-btn-bg:gray;
+}
+@media (max-width: 1000px) {
+    .gallery .image{
+        width: calc(100%/2);
+    }
+}
+@media (max-width: 600px) {
+    .gallery .image{
+        padding: 4px;
+        width: 100%;
+        height: 33%;
+    }
+}
+
+

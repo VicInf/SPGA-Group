@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}SPGA Group{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+        body{
+            background-color: #d3d3d3;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="intro">
+    <h1 class="logo-header">
+        <span class="logo"><img src="{{url_for('static', filename='/Web Page Images/Logo fondo negro.png') }}" width=125></span>
+        <span class="logo" style="font-size: 45px;">|SPGA Group</span>
+    </h1>
+</div>
+<div class="landing_page">
+    <section class="main">
+        <div class="text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">Arquitectos Profesionales</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, debitis.</p>
+            </div>
+            <div class="main-image">
+            </div>
+        </div>
+    </section>
+</div>
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+{{ super() }}
+<script src="{{url_for('static', filename='/js/script.js') }}"></script>
+{% endblock %}
